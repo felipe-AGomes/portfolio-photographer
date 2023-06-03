@@ -1,0 +1,9 @@
+.imagesContainer {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+	justify-content: center;
+	gap: 20px;
+
+	width: 100%;
+	min-height: 100%;
+}

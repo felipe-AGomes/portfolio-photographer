@@ -1,10 +1,19 @@
 .headerContain {
 	display: flex;
+	justify-content: flex-end;
 
 	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 36px 100px;
 	height: 100px;
 	width: 100%;
-	background: red;
+	background: transparent;
+	transition: 0.4s;
+}
+
+.headerContain.scroled {
+	background: #fff5;
 }
 
 .headerContain ul {
@@ -12,6 +21,11 @@
 	align-items: center;
 	gap: 17px;
 
-	
 	list-style: none;
+}
+
+.headerContain ul li {
+	cursor: pointer;
+	font-weight: 500;
+	font-size: 1.1rem;
 }

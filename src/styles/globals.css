@@ -1,11 +1,21 @@
 @font-face {
 	font-family: 'grenda';
-	src: url('/public/fonts/grenda.otf');
+	src: url('/fonts/grenda.otf');
 }
 
 * {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
-	font-family: 'grenda' sans-serif;
+	font-family: 'grenda', sans-serif;
+}
+
+body,
+main {
+	background: #f4e0c7;
+	min-height: 100vh;
+}
+
+main {
+	padding: 200px 100px 0;
 }

@@ -1,0 +1,14 @@
+.personName {
+	position: fixed;
+	top: 120px;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: 0.4s;
+}
+
+.personName.scroled {
+	top: 41px;
+	left: 100px;
+	transform: translateX(0);
+	font-size: 1.2rem;
+}
