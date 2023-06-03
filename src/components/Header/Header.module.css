@@ -1,0 +1,17 @@
+.headerContain {
+	display: flex;
+
+	position: fixed;
+	height: 100px;
+	width: 100%;
+	background: red;
+}
+
+.headerContain ul {
+	display: flex;
+	align-items: center;
+	gap: 17px;
+
+	
+	list-style: none;
+}
