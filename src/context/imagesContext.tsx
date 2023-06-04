@@ -1,15 +1,20 @@
 import React, { createContext, useContext, useState } from 'react';
+import { CategoriesProps } from './currentPageContext';
 
 type ImagesContextProps = {
 	images: ImagesProps[] | [];
 	setImages: (newValue: ImagesProps[] | []) => void;
 };
 
-type ImagesProps = {
+export type ImagesProps = {
 	url: string;
-	category: string;
+	category: CategoriesProps;
 	person?: string;
 	locale?: string;
+};
+
+type Props = {
+	children: React.ReactNode;
 };
 
 //TODO: DADOS TEMPORÁRIOS
@@ -79,80 +84,74 @@ const temporaryImages: ImagesProps[] = [
 
 	{
 		url: '/images/c',
-		category: 'beleza/moda',
+		category: 'moda/beleza',
 		locale: 'Studio',
 		person: 'Alguma pessoa2',
 	},
 	{
 		url: '/images/c1',
-		category: 'beleza/moda',
+		category: 'moda/beleza',
 		locale: 'Studio',
 		person: 'Alguma pessoa2',
 	},
 	{
 		url: '/images/c2',
-		category: 'beleza/moda',
+		category: 'moda/beleza',
 		locale: 'Studio',
 		person: 'Alguma pessoa2',
 	},
 	{
 		url: '/images/c3',
-		category: 'beleza/moda',
-		locale: 'Studio',
-		person: 'Alguma pessoa2',
-	},
-	{
-		url: '/images/c4',
-		category: 'beleza/moda',
+		category: 'moda/beleza',
 		locale: 'Studio',
 		person: 'Alguma pessoa2',
 	},
 	{
 		url: '/images/c5',
-		category: 'beleza/moda',
+		category: 'moda/beleza',
 		locale: 'Studio',
 		person: 'Alguma pessoa2',
 	},
 	{
 		url: '/images/c6',
-		category: 'beleza/moda',
+		category: 'moda/beleza',
 		locale: 'Studio',
 		person: 'Alguma pessoa2',
 	},
 	{
 		url: '/images/c7',
-		category: 'beleza/moda',
+		category: 'moda/beleza',
 		locale: 'Studio',
 		person: 'Alguma pessoa2',
 	},
 
 	{
 		url: '/images/d',
-		category: 'retrato',
+		category: 'historia',
 		locale: 'Florianópolis',
 		person: 'Alguma pessoa3',
 	},
 	{
 		url: '/images/d1',
-		category: 'retrato',
+		category: 'historia',
 		locale: 'Florianópolis',
 		person: 'Alguma pessoa3',
 	},
 	{
 		url: '/images/d2',
-		category: 'retrato',
+		category: 'historia',
 		locale: 'Florianópolis',
 		person: 'Alguma pessoa3',
 	},
 	{
 		url: '/images/d3',
-		category: 'retrato',
+		category: 'historia',
 		locale: 'Florianópolis',
 		person: 'Alguma pessoa3',
 	},
 	{
 		url: '/images/d4',
-		category: 'retrato',
+		category: 'historia',
 		locale: 'Florianópolis',
 		person: 'Alguma pessoa3',
 	},
@@ -162,10 +161,6 @@ export const ImagesContext = createContext<ImagesContextProps>({
 	images: [],
 	setImages: (newValue) => {},
 });
-
-type Props = {
-	children: React.ReactNode;
-};
 
 export function ImagesContextProvider({ children }: Props) {
 	const [images, setImages] = useState<ImagesProps[] | []>(temporaryImages);
