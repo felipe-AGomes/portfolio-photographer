@@ -45,9 +45,9 @@
 .formContain button {
 	padding: 7px 20px;
 	width: min-content;
-	background: #b58561;
+	background: #b58561bb;
 	border-radius: 5px;
-	color: #f4e0c7;
+	color: #fff;
 	font-weight: bold;
 	font-size: 1rem;
 	border: none;
