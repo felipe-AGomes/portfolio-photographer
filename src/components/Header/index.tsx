@@ -17,8 +17,7 @@ export default function Header() {
 			<ul>
 				<li>Início</li>
 				<li>Retratos</li>
-				<li>Moda</li>
-				<li>Beleza</li>
+				<li>Moda/Beleza</li>
 				<li>História</li>
 				<li>Contato</li>
 			</ul>

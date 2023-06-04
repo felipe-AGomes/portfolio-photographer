@@ -5,8 +5,11 @@ import PersonName from '@/components/PersonName';
 import Head from 'next/head';
 import { useEffect } from 'react';
 import GridItem from '@/components/GridItem';
+import useImagesContext from '@/hooks/useImagesContext';
 
 export default function Home() {
+	const { images } = useImagesContext();
+
 	return (
 		<>
 			<Head>
@@ -36,12 +39,12 @@ export default function Home() {
 					<GridItem>
 						<CardImage path='/images/c7.jpg' />
 						<CardImage path='/images/a1.jpg' />
-						<CardImage path='/images/a2.jpg' />
+						<CardImage path='/images/b1.jpg' />
 					</GridItem>
 					<GridItem>
-						<CardImage path='/images/a.jpg' />
+						<CardImage path='/images/b2.jpg' />
 						<CardImage path='/images/c6.jpg' />
-						<CardImage path='/images/a2.jpg' />
+						<CardImage path='/images/a3.jpg' />
 					</GridItem>
 				</ImagesContainer>
 			</main>
