@@ -2,7 +2,7 @@ import React from 'react';
 import S from './GridImagesContainer.module.css'
 
 type Props = {
-	children: React.ReactNode;
+	children?: React.ReactNode;
 };
 
 export default function GridImagesContainer({ children }: Props) {
