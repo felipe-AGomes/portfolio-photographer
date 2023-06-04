@@ -16,6 +16,20 @@
 	background: #fff5;
 }
 
+.personNameContain {
+	display: flex;
+	justify-content: space-between;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 36px 100px;
+	height: 100px;
+	width: 100%;
+	background: transparent;
+	transition: 0.4s;
+}
+
 .headerContain ul {
 	display: flex;
 	align-items: center;
@@ -28,4 +42,5 @@
 	cursor: pointer;
 	font-weight: 500;
 	font-size: 1.1rem;
+	font-family: 'dubai', sans-serif;
 }
