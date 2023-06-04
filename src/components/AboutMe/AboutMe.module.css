@@ -1,0 +1,26 @@
+.aboutMeContain {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	width: 100%;
+}
+
+.aboutMeContain div {
+	width: 50%;
+}
+
+.aboutMeContain div h1 {
+	margin-bottom: 20px;
+}
+
+.aboutMeContain div p {
+	font-size: 1.2rem;
+	letter-spacing: 0.5px;
+	margin-bottom: 10px;
+}
+
+.aboutMeContain div h1,
+.aboutMeContain div p {
+	font-family: 'dubai', sans-serif;
+}
