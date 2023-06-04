@@ -6,6 +6,7 @@ import {} from 'next/font/google';
 import { CategoriesProps } from '@/context/currentPageContext';
 import useCurrentPageContext from '@/hooks/useCurrentPageContext';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 type Props = {
 	personName?: string;
@@ -39,10 +40,17 @@ export default function Header({ personName }: Props) {
 				${personName ? `${S.personNameContain}` : ''}`}
 		>
 			<div className={S.logoBox}>
-				<img
-					src='/logo.png'
-					alt='Logo'
-				/>
+				<Link
+					href='/'
+					onClick={() => {
+						setCurrentPage('inicio');
+					}}
+				>
+					<img
+						src='/logo.png'
+						alt='Logo'
+					/>
+				</Link>
 			</div>
 			{personName && (
 				<div>
@@ -53,6 +61,7 @@ export default function Header({ personName }: Props) {
 			<ul>
 				<li onClick={() => handleClick('inicio')}>Início</li>
 				<li onClick={() => handleClick('retratos')}>Retratos</li>
+				<li onClick={() => handleClick('bodyscape')}>Bodyscape</li>
 				<li onClick={() => handleClick('moda/beleza')}>Moda/Beleza</li>
 				<li onClick={() => handleClick('historia')}>História</li>
 				<li onClick={() => handleClick('contact')}>Contato</li>

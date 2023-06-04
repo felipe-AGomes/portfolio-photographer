@@ -38,11 +38,13 @@ export default function SendMe() {
 					autoComplete=''
 					type='text'
 					id='name'
+					required
 					{...register('name')}
 				/>
 				<label htmlFor='mensagem'>Mensagem:</label>
 				<textarea
 					autoComplete='off'
+					required
 					id='mensagem'
 					{...register('message')}
 				></textarea>

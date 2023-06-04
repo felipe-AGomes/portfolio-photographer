@@ -2,11 +2,7 @@ import AboutMe from '@/components/AboutMe';
 import Header from '@/components/Header';
 import PersonImage from '@/components/PersonImage';
 import SendMe from '@/components/SendMe';
-import {
-	AiFillInstagram,
-	AiFillLinkedin,
-	AiOutlineWhatsApp,
-} from 'react-icons/ai';
+import { AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
 
 export default function Contact() {
 	return (

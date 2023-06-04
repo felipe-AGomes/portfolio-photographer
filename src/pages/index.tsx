@@ -7,22 +7,24 @@ import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import useImagesContext from '@/hooks/useImagesContext';
 import useCurrentPageContext from '@/hooks/useCurrentPageContext';
-import { ImagesProps } from '@/context/imagesContext';
+import { ImageProps } from '@/context/imagesContext';
 
 export default function Home() {
 	const { images } = useImagesContext();
 	const { currentPage } = useCurrentPageContext();
-	const [filteredImages, setFilteredImages] = useState<ImagesProps[] | []>([]);
+	const [justCover, setJustCover] = useState<ImageProps[] | []>([]);
+	const [filteredImages, setFilteredImages] = useState<ImageProps[] | []>([]);
 
 	useEffect(() => {
-		const newFilteredImages = images.filter(
+		setJustCover(images.filter((image) => image.cover));
+
+		const newFilteredImages = justCover.filter(
 			(image) => image.category === currentPage,
 		);
 
 		setFilteredImages(newFilteredImages);
 	}, [currentPage]);
 
-	console.log(currentPage);
 	return (
 		<>
 			<Head>
@@ -45,11 +47,11 @@ export default function Home() {
 				<PersonName />
 				<ImagesContainer>
 					{currentPage === 'inicio'
-						? images.map((image) => {
+						? justCover.map((image) => {
 								return (
 									<CardImage
 										key={image.url}
-										path={`${image.url}.jpg`}
+										image={image}
 									/>
 								);
 						  })
@@ -57,7 +59,7 @@ export default function Home() {
 								return (
 									<CardImage
 										key={image.url}
-										path={`${image.url}.jpg`}
+										image={image}
 									/>
 								);
 						  })}

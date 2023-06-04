@@ -4,7 +4,8 @@ export type CategoriesProps =
 	| 'historia'
 	| 'moda/beleza'
 	| 'retratos'
-	| 'inicio';
+	| 'inicio'
+	| 'bodyscape';
 
 type CurrentPageContextProps = {
 	currentPage: CategoriesProps;
