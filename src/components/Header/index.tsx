@@ -23,9 +23,9 @@ export default function Header({ personName }: Props) {
 		setScroled(window.scrollY > 0);
 	};
 
-	const handleClick = (category: CategoriesProps | 'contato') => {
-		if (category === 'contato') {
-			router.push('/contato');
+	const handleClick = (category: CategoriesProps | 'contact') => {
+		if (category === 'contact') {
+			router.push('/contact');
 			return;
 		}
 		router.push('/');
@@ -48,7 +48,7 @@ export default function Header({ personName }: Props) {
 				<li onClick={() => handleClick('retratos')}>Retratos</li>
 				<li onClick={() => handleClick('moda/beleza')}>Moda/Beleza</li>
 				<li onClick={() => handleClick('historia')}>História</li>
-				<li onClick={() => handleClick('contato')}>Contato</li>
+				<li onClick={() => handleClick('contact')}>Contato</li>
 			</ul>
 		</header>
 	);

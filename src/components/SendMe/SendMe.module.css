@@ -1,0 +1,53 @@
+.sendMeContain {
+	margin-top: 50px;
+	width: 100%;
+	max-width: 500px;
+}
+
+.formContain {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.formContain label {
+	font-weight: 600;
+	margin-top: 30px;
+}
+.formContain label,
+.formContain input {
+	font-family: 'dubai', sans-serif;
+}
+
+.formContain input {
+	height: 40px;
+}
+
+.formContain input,
+.formContain textarea {
+	/* border-radius: 5px; */
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #b58561;
+	background: #fff7;
+	font-family: 'dubai', sans-serif;
+	font-size: 1rem;
+	font-weight: 500;
+	padding: 10px 15px
+}
+
+.formContain textarea {
+	height: 100px;
+	resize: none;
+	margin-bottom: 20px;
+}
+
+.formContain button {
+	padding: 7px 20px;
+	width: min-content;
+	background: #b58561;
+	border-radius: 5px;
+	color: #f4e0c7;
+	font-weight: bold;
+	font-size: 1rem;
+}

@@ -1,17 +1,33 @@
 import AboutMe from '@/components/AboutMe';
 import Header from '@/components/Header';
 import PersonImage from '@/components/PersonImage';
-import { AiFillInstagram } from 'react-icons/ai';
+import SendMe from '@/components/SendMe';
+import {
+	AiFillInstagram,
+	AiFillLinkedin,
+	AiOutlineWhatsApp,
+} from 'react-icons/ai';
 
-export default function Contato() {
+export default function Contact() {
 	return (
 		<main>
 			<Header personName='CAROLINE PECHARKA' />
 			<AboutMe>
 				<div>
 					<h1>Redes sociais</h1>
-					<div>
-						<AiFillInstagram size={24} style={{cursor: 'pointer'}}/>
+					<div style={{ marginBottom: '10px' }}>
+						<AiFillInstagram
+							size={24}
+							style={{ cursor: 'pointer', marginRight: '10px' }}
+						/>
+						<AiFillLinkedin
+							size={24}
+							style={{ cursor: 'pointer', marginRight: '10px' }}
+						/>
+						<AiOutlineWhatsApp
+							size={24}
+							style={{ cursor: 'pointer', marginRight: '10px' }}
+						/>
 					</div>
 
 					<h1>Sobre mim</h1>
@@ -32,6 +48,7 @@ export default function Contato() {
 					}
 				/>
 			</AboutMe>
+			<SendMe />
 		</main>
 	);
 }
