@@ -1,4 +1,9 @@
 @font-face {
+	font-family: 'dubai';
+	src: url('/fonts/Dubai-Regular.ttf');
+}
+
+@font-face {
 	font-family: 'grenda';
 	src: url('/fonts/grenda.otf');
 }
