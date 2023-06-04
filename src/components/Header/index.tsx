@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useEffect, useState } from 'react';
 import S from './Header.module.css';
 
@@ -37,6 +38,12 @@ export default function Header({ personName }: Props) {
 			className={`${S.headerContain} ${scroled ? S.scroled : ''}
 				${personName ? `${S.personNameContain}` : ''}`}
 		>
+			<div className={S.logoBox}>
+				<img
+					src='/logo.png'
+					alt='Logo'
+				/>
+			</div>
 			{personName && (
 				<div>
 					<h1>{personName}</h1>

@@ -30,6 +30,22 @@
 	transition: 0.4s;
 }
 
+.logoBox {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100px;
+	height: 100px;
+}
+
+.logoBox img {
+	width: 100%;
+}
+
 .headerContain ul {
 	display: flex;
 	align-items: center;

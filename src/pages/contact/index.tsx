@@ -24,10 +24,6 @@ export default function Contact() {
 							size={24}
 							style={{ cursor: 'pointer', marginRight: '10px' }}
 						/>
-						<AiOutlineWhatsApp
-							size={24}
-							style={{ cursor: 'pointer', marginRight: '10px' }}
-						/>
 					</div>
 
 					<h1>Sobre mim</h1>
