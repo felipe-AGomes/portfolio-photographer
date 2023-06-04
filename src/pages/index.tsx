@@ -1,15 +1,13 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import CardImage from '@/components/CardImage';
 import Header from '@/components/Header';
 import ImagesContainer from '@/components/GridImagesContainer';
 import PersonName from '@/components/PersonName';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
-import GridItem from '@/components/GridItem';
 import useImagesContext from '@/hooks/useImagesContext';
 import useCurrentPageContext from '@/hooks/useCurrentPageContext';
-import { CategoriesProps } from '@/context/currentPageContext';
 import { ImagesProps } from '@/context/imagesContext';
-import ContactPage from '@/components/ContactPage';
 
 export default function Home() {
 	const { images } = useImagesContext();
