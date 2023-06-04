@@ -3,13 +3,28 @@ import Header from '@/components/Header';
 import ImagesContainer from '@/components/GridImagesContainer';
 import PersonName from '@/components/PersonName';
 import Head from 'next/head';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import GridItem from '@/components/GridItem';
 import useImagesContext from '@/hooks/useImagesContext';
+import useCurrentPageContext from '@/hooks/useCurrentPageContext';
+import { CategoriesProps } from '@/context/currentPageContext';
+import { ImagesProps } from '@/context/imagesContext';
+import ContactPage from '@/components/ContactPage';
 
 export default function Home() {
 	const { images } = useImagesContext();
+	const { currentPage } = useCurrentPageContext();
+	const [filteredImages, setFilteredImages] = useState<ImagesProps[] | []>([]);
 
+	useEffect(() => {
+		const newFilteredImages = images.filter(
+			(image) => image.category === currentPage,
+		);
+
+		setFilteredImages(newFilteredImages);
+	}, [currentPage]);
+
+	console.log(currentPage);
 	return (
 		<>
 			<Head>
@@ -31,21 +46,23 @@ export default function Home() {
 				<Header />
 				<PersonName />
 				<ImagesContainer>
-					<GridItem>
-						<CardImage path='/images/a.jpg' />
-						<CardImage path='/images/b.jpg' />
-						<CardImage path='/images/d.jpg' />
-					</GridItem>
-					<GridItem>
-						<CardImage path='/images/c7.jpg' />
-						<CardImage path='/images/a1.jpg' />
-						<CardImage path='/images/b1.jpg' />
-					</GridItem>
-					<GridItem>
-						<CardImage path='/images/b2.jpg' />
-						<CardImage path='/images/c6.jpg' />
-						<CardImage path='/images/a3.jpg' />
-					</GridItem>
+					{currentPage === 'inicio'
+						? images.map((image) => {
+								return (
+									<CardImage
+										key={image.url}
+										path={`${image.url}.jpg`}
+									/>
+								);
+						  })
+						: filteredImages.map((image) => {
+								return (
+									<CardImage
+										key={image.url}
+										path={`${image.url}.jpg`}
+									/>
+								);
+						  })}
 				</ImagesContainer>
 			</main>
 		</>
