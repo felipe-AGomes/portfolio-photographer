@@ -24,6 +24,7 @@ export default function CardImage({ image, isAlbum }: Props) {
 	return (
 		<figure
 			className={S.imageContain}
+			style={isAlbum ? { cursor: 'default' } : {}}
 			onClick={() => {
 				if (isAlbum) {
 					return;
@@ -34,13 +35,13 @@ export default function CardImage({ image, isAlbum }: Props) {
 			<h3
 				className={`${S.person} ${isCardHover && S.active}`}
 				onMouseEnter={() => {
-					if (!isAlbum) {
+					if (isAlbum) {
 						return;
 					}
 					handleHover(true);
 				}}
 				onMouseLeave={() => {
-					if (!isAlbum) {
+					if (isAlbum) {
 						return;
 					}
 					handleHover(false);
@@ -49,16 +50,17 @@ export default function CardImage({ image, isAlbum }: Props) {
 				Ensaio | {image.person}
 			</h3>
 			<img
+				className={`${isCardHover ? S.cardHover : ''}`}
 				src={`${image.url}.jpg`}
 				alt='imagem'
 				onMouseEnter={() => {
-					if (!isAlbum) {
+					if (isAlbum) {
 						return;
 					}
 					handleHover(true);
 				}}
 				onMouseLeave={() => {
-					if (!isAlbum) {
+					if (isAlbum) {
 						return;
 					}
 					handleHover(false);
