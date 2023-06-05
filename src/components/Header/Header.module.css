@@ -67,11 +67,11 @@ header.contact {
 
 .personName {
 	position: relative;
-	top: 4px;
+	top: 3px;
 }
 
 .personName h1 {
-	font-size: 1rem;
+	font-size: 1.2rem;
 }
 
 @media (max-width: 890px) {
@@ -96,5 +96,8 @@ header.contact {
 
 	.personName {
 		left: 50px;
+	}
+	.personName h1 {
+		font-size: 1rem;
 	}
 }
