@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import S from './Header.module.css';
 
 import {} from 'next/font/google';
@@ -7,6 +7,7 @@ import { CategoriesProps } from '@/context/currentPageContext';
 import useCurrentPageContext from '@/hooks/useCurrentPageContext';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import useScrolledContext from '@/hooks/useScrolledContext';
 
 type Props = {
 	personName?: string;
@@ -14,16 +15,16 @@ type Props = {
 };
 
 export default function Header({ personName, isContact }: Props) {
-	const [scroled, setScroled] = useState<boolean>(false);
+	const { scrolled, setScrolled } = useScrolledContext();
 	const { setCurrentPage } = useCurrentPageContext();
 	const router = useRouter();
 
 	useEffect(() => {
 		document.addEventListener('scroll', handleScroll);
-	}, []);
+	});
 
 	const handleScroll = () => {
-		setScroled(window.scrollY > 0);
+		setScrolled(window.scrollY > 0);
 	};
 
 	const handleClick = (category: CategoriesProps | 'contact') => {
@@ -38,7 +39,7 @@ export default function Header({ personName, isContact }: Props) {
 	return (
 		<header
 			className={`${S.headerContain} ${
-				isContact ? S.contact : scroled ? S.scroled : ''
+				isContact ? S.contact : scrolled ? S.scrolled : ''
 			} 
 				${personName ? `${S.personNameContain}` : ''}`}
 		>

@@ -1,5 +1,6 @@
 import CurrentPageContextProvider from '@/context/currentPageContext';
 import { ImagesContextProvider } from '@/context/imagesContext';
+import ScolledContextProvider from '@/context/scrolledContext';
 import React from 'react';
 
 type Props = {
@@ -9,7 +10,9 @@ type Props = {
 export default function ContextProvider({ children }: Props) {
 	return (
 		<CurrentPageContextProvider>
-			<ImagesContextProvider>{children}</ImagesContextProvider>
+			<ScolledContextProvider>
+				<ImagesContextProvider>{children}</ImagesContextProvider>
+			</ScolledContextProvider>
 		</CurrentPageContextProvider>
 	);
 }

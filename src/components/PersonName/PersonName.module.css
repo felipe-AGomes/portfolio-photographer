@@ -6,7 +6,7 @@
 	transition: 0.4s;
 }
 
-.personName.scroled {
+.personName.scrolled {
 	top: 38px;
 	left: 100px;
 	transform: translateX(0);
@@ -14,7 +14,7 @@
 }
 
 @media (max-width: 890px) {
-	.personName.scroled {
+	.personName.scrolled {
 		font-size: 1rem;
 		left: 70px;
 	}

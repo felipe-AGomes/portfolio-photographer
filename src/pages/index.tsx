@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react';
 import useImagesContext from '@/hooks/useImagesContext';
 import useCurrentPageContext from '@/hooks/useCurrentPageContext';
 import { ImageProps } from '@/context/imagesContext';
+import SocialMedia from '@/components/SocialMedia';
 
 export default function Home() {
 	const { images } = useImagesContext();
@@ -48,6 +49,7 @@ export default function Home() {
 			<main>
 				<Header />
 				<PersonName />
+				<SocialMedia />
 				<ImagesContainer>
 					{currentPage === 'inicio'
 						? justCover.map((image, index) => {

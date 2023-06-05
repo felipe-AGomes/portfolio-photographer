@@ -1,21 +1,14 @@
 import { useEffect, useState } from 'react';
 import S from './PersonName.module.css';
+import useScrolledContext from '@/hooks/useScrolledContext';
 
 export default function PersonName() {
-	const [scroled, setScroled] = useState<boolean>(false);
-
-	useEffect(() => {
-		document.addEventListener('scroll', handleScroll);
-	}, []);
-
-	const handleScroll = () => {
-		setScroled(window.scrollY > 0);
-	};
+	const { scrolled } = useScrolledContext();
 
 	return (
 		<h1
 			id='personName'
-			className={`${S.personName} ${scroled ? S.scroled : ''}`}
+			className={`${S.personName} ${scrolled ? S.scrolled : ''}`}
 		>
 			CAROLINE PECHARKA
 		</h1>

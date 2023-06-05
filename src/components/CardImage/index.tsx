@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { useState } from 'react';
 import { ImageProps } from '@/context/imagesContext';
 import S from './CardImage.module.css';
 import { useRouter } from 'next/router';
@@ -9,10 +10,15 @@ type Props = {
 };
 
 export default function CardImage({ image, isAlbum }: Props) {
+	const [isCardHover, setIsCardHover] = useState<boolean>(false);
 	const router = useRouter();
 
 	const handleClick = (image: ImageProps) => {
 		router.push(`/${image.album}`);
+	};
+
+	const handleHover = (isHover: boolean) => {
+		setIsCardHover(isHover);
 	};
 
 	return (
@@ -25,9 +31,16 @@ export default function CardImage({ image, isAlbum }: Props) {
 				handleClick(image);
 			}}
 		>
+			<h3 className={`${S.person} ${isCardHover && S.active}`}>Ensaio | {image.person}</h3>
 			<img
 				src={`${image.url}.jpg`}
 				alt='imagem'
+				onMouseEnter={() => {
+					handleHover(true);
+				}}
+				onMouseLeave={() => {
+					handleHover(false);
+				}}
 			/>
 		</figure>
 	);

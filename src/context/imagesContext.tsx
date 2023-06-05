@@ -55,14 +55,6 @@ const temporaryImages: ImageProps[] = [
 		cover: true,
 	},
 	{
-		url: '/images/a',
-		category: 'historia',
-		locale: 'Florianópolis',
-		person: 'Alguma pessoa3',
-		album: 'album4',
-		cover: true,
-	},
-	{
 		url: '/images/c7',
 		category: 'bodyscape',
 		locale: 'Studio',

@@ -1,0 +1,12 @@
+.socialMedia {
+	position: relative;
+	left: 50%;
+	bottom: 19px;
+	transform: translateX(-30px);
+	transition: 0.4s;
+}
+
+.socialMedia.scrolled {
+	color: transparent;
+	transition: 0.4s;
+}
