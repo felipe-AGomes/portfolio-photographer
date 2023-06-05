@@ -7,7 +7,7 @@ import { AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
 export default function Contact() {
 	return (
 		<main>
-			<Header personName='CAROLINE PECHARKA' />
+			<Header personName='CAROLINE PECHARKA' isContact />
 			<AboutMe>
 				<div>
 					<h1>Redes sociais</h1>

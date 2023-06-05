@@ -31,38 +31,6 @@ const temporaryImages: ImageProps[] = [
 		cover: true,
 	},
 	{
-		url: '/images/c7',
-		category: 'bodyscape',
-		locale: 'Studio',
-		person: 'Alguma pessoa2',
-		album: 'album3',
-		cover: true,
-	},
-	{
-		url: '/images/c7',
-		category: 'bodyscape',
-		locale: 'Studio',
-		person: 'Alguma pessoa2',
-		album: 'album3',
-		cover: true,
-	},
-	{
-		url: '/images/c7',
-		category: 'bodyscape',
-		locale: 'Studio',
-		person: 'Alguma pessoa2',
-		album: 'album3',
-		cover: true,
-	},
-	{
-		url: '/images/c7',
-		category: 'bodyscape',
-		locale: 'Studio',
-		person: 'Alguma pessoa2',
-		album: 'album3',
-		cover: true,
-	},
-	{
 		url: '/images/a',
 		category: 'moda/beleza',
 		locale: 'Studio',
@@ -70,6 +38,39 @@ const temporaryImages: ImageProps[] = [
 		album: 'album1',
 		cover: true,
 	},
+	{
+		url: '/images/d',
+		category: 'historia',
+		locale: 'Florianópolis',
+		person: 'Alguma pessoa3',
+		album: 'album4',
+		cover: true,
+	},
+	{
+		url: '/images/b',
+		category: 'moda/beleza',
+		locale: 'Studio',
+		person: 'Alguma pessoa1',
+		album: 'album2',
+		cover: true,
+	},
+	{
+		url: '/images/a',
+		category: 'historia',
+		locale: 'Florianópolis',
+		person: 'Alguma pessoa3',
+		album: 'album4',
+		cover: true,
+	},
+	{
+		url: '/images/c7',
+		category: 'bodyscape',
+		locale: 'Studio',
+		person: 'Alguma pessoa2',
+		album: 'album3',
+		cover: true,
+	},
+
 	{
 		url: '/images/a1',
 		category: 'moda/beleza',
@@ -86,6 +87,7 @@ const temporaryImages: ImageProps[] = [
 		album: 'album1',
 		cover: false,
 	},
+
 	{
 		url: '/images/a4',
 		category: 'moda/beleza',
@@ -95,14 +97,6 @@ const temporaryImages: ImageProps[] = [
 		cover: false,
 	},
 
-	{
-		url: '/images/b',
-		category: 'moda/beleza',
-		locale: 'Studio',
-		person: 'Alguma pessoa1',
-		album: 'album2',
-		cover: true,
-	},
 	{
 		url: '/images/b1',
 		category: 'moda/beleza',
@@ -185,14 +179,6 @@ const temporaryImages: ImageProps[] = [
 		cover: false,
 	},
 
-	{
-		url: '/images/d',
-		category: 'historia',
-		locale: 'Florianópolis',
-		person: 'Alguma pessoa3',
-		album: 'album4',
-		cover: true,
-	},
 	{
 		url: '/images/d1',
 		category: 'historia',

@@ -12,6 +12,10 @@
 	transition: 0.4s;
 }
 
+header.contact {
+	background: #fff;
+}
+
 .headerContain.scroled {
 	background: #fff5;
 }
@@ -43,7 +47,7 @@
 }
 
 .logoBox img {
-	width: 80px;
+	width: 100%;
 }
 
 .headerContain ul {
@@ -61,6 +65,15 @@
 	font-family: 'dubai', sans-serif;
 }
 
+.personName {
+	position: relative;
+	top: 4px;
+}
+
+.personName h1 {
+	font-size: 1rem;
+}
+
 @media (max-width: 890px) {
 	.headerContain {
 		padding: 36px 20px;
@@ -76,5 +89,12 @@
 		position: absolute;
 		top: 0;
 		left: 0;
+	}
+	.logoBox img {
+		width: 80px;
+	}
+
+	.personName {
+		left: 50px;
 	}
 }

@@ -10,9 +10,10 @@ import Link from 'next/link';
 
 type Props = {
 	personName?: string;
+	isContact?: boolean;
 };
 
-export default function Header({ personName }: Props) {
+export default function Header({ personName, isContact }: Props) {
 	const [scroled, setScroled] = useState<boolean>(false);
 	const { setCurrentPage } = useCurrentPageContext();
 	const router = useRouter();
@@ -36,7 +37,9 @@ export default function Header({ personName }: Props) {
 
 	return (
 		<header
-			className={`${S.headerContain} ${scroled ? S.scroled : ''}
+			className={`${S.headerContain} ${
+				isContact ? S.contact : scroled ? S.scroled : ''
+			} 
 				${personName ? `${S.personNameContain}` : ''}`}
 		>
 			<div className={S.logoBox}>
@@ -53,7 +56,7 @@ export default function Header({ personName }: Props) {
 				</Link>
 			</div>
 			{personName && (
-				<div>
+				<div className={S.personName}>
 					<h1>{personName}</h1>
 				</div>
 			)}
