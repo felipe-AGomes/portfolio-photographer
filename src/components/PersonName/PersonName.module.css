@@ -4,6 +4,7 @@
 	left: 50%;
 	transform: translateX(-50%);
 	transition: 0.4s;
+	z-index: 1001;
 }
 
 .personName.scrolled {
