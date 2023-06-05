@@ -34,7 +34,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	
+
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -43,7 +43,7 @@
 }
 
 .logoBox img {
-	width: 100%;
+	width: 80px;
 }
 
 .headerContain ul {
@@ -59,4 +59,22 @@
 	font-weight: 500;
 	font-size: 1.1rem;
 	font-family: 'dubai', sans-serif;
+}
+
+@media (max-width: 890px) {
+	.headerContain {
+		padding: 36px 20px;
+	}
+	.headerContain ul {
+		display: flex;
+		align-items: center;
+		gap: 7px;
+	}
+	.logoBox {
+		justify-content: flex-start;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
 }
