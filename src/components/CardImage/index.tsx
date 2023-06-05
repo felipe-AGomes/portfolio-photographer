@@ -34,9 +34,15 @@ export default function CardImage({ image, isAlbum }: Props) {
 			<h3
 				className={`${S.person} ${isCardHover && S.active}`}
 				onMouseEnter={() => {
+					if (!isAlbum) {
+						return;
+					}
 					handleHover(true);
 				}}
 				onMouseLeave={() => {
+					if (!isAlbum) {
+						return;
+					}
 					handleHover(false);
 				}}
 			>
@@ -46,9 +52,15 @@ export default function CardImage({ image, isAlbum }: Props) {
 				src={`${image.url}.jpg`}
 				alt='imagem'
 				onMouseEnter={() => {
+					if (!isAlbum) {
+						return;
+					}
 					handleHover(true);
 				}}
 				onMouseLeave={() => {
+					if (!isAlbum) {
+						return;
+					}
 					handleHover(false);
 				}}
 			/>
