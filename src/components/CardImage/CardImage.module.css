@@ -28,6 +28,11 @@
 	font-family: 'dubai', sans-serif;
 }
 
+.imageContain .person:hover ~ img {
+	filter: blur(2px) contrast(0.5);
+	transition: 0.2s linear;
+}
+
 .imageContain .person.active {
 	color: #fff;
 	transition: 0.2s;

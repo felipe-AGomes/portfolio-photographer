@@ -31,7 +31,17 @@ export default function CardImage({ image, isAlbum }: Props) {
 				handleClick(image);
 			}}
 		>
-			<h3 className={`${S.person} ${isCardHover && S.active}`}>Ensaio | {image.person}</h3>
+			<h3
+				className={`${S.person} ${isCardHover && S.active}`}
+				onMouseEnter={() => {
+					handleHover(true);
+				}}
+				onMouseLeave={() => {
+					handleHover(false);
+				}}
+			>
+				Ensaio | {image.person}
+			</h3>
 			<img
 				src={`${image.url}.jpg`}
 				alt='imagem'
