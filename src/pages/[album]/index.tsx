@@ -1,5 +1,5 @@
 import CardImage from '@/components/CardImage';
-import GridImagesContainer from '@/components/GridImagesContainer';
+import GridImagesContainer from '@/components/ImagesContainer';
 import Header from '@/components/Header';
 import PersonName from '@/components/PersonName';
 import { ImageProps } from '@/context/imagesContext';

@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import CardImage from '@/components/CardImage';
 import Header from '@/components/Header';
-import ImagesContainer from '@/components/GridImagesContainer';
+import ImagesContainer from '@/components/ImagesContainer';
 import PersonName from '@/components/PersonName';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
@@ -16,14 +16,17 @@ export default function Home() {
 	const [filteredImages, setFilteredImages] = useState<ImageProps[] | []>([]);
 
 	useEffect(() => {
-		setJustCover(images.filter((image) => image.cover));
+		const newJustCover = images.filter((image) => image.cover);
+		setJustCover(newJustCover);
+	}, [images]);
 
+	useEffect(() => {
 		const newFilteredImages = justCover.filter(
 			(image) => image.category === currentPage,
 		);
 
 		setFilteredImages(newFilteredImages);
-	}, [currentPage]);
+	}, [currentPage, justCover]);
 
 	return (
 		<>
@@ -47,18 +50,18 @@ export default function Home() {
 				<PersonName />
 				<ImagesContainer>
 					{currentPage === 'inicio'
-						? justCover.map((image) => {
+						? justCover.map((image, index) => {
 								return (
 									<CardImage
-										key={image.url}
+										key={image.url + index}
 										image={image}
 									/>
 								);
 						  })
-						: filteredImages.map((image) => {
+						: filteredImages.map((image, index) => {
 								return (
 									<CardImage
-										key={image.url}
+										key={image.url + index}
 										image={image}
 									/>
 								);

@@ -16,7 +16,7 @@ export default function CardImage({ image, isAlbum }: Props) {
 	};
 
 	return (
-		<div
+		<figure
 			className={S.imageContain}
 			onClick={() => {
 				if (isAlbum) {
@@ -29,6 +29,6 @@ export default function CardImage({ image, isAlbum }: Props) {
 				src={`${image.url}.jpg`}
 				alt='imagem'
 			/>
-		</div>
+		</figure>
 	);
 }
