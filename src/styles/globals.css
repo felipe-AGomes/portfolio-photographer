@@ -31,3 +31,9 @@ main {
 		padding: 200px 20px 100px;
 	}
 }
+
+@media (max-width: 780px) {
+	main {
+		padding: 200px 0 100px;
+	}
+}

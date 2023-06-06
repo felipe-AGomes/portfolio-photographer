@@ -4,8 +4,14 @@
 	width: 100%;
 }
 
-@media (max-width: 890px) {
+@media (max-width: 780px) {
 	.imagesContainer {
 		column-count: 2;
+	}
+}
+
+@media (max-width: 540px) {
+	.imagesContainer {
+		column-count: 1;
 	}
 }

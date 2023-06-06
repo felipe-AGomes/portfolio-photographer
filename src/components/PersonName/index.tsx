@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import S from './PersonName.module.css';
 import useScrolledContext from '@/hooks/useScrolledContext';
+import useWindowWidthContext from '@/hooks/useWindowWidthContext';
 
 export default function PersonName() {
 	const { scrolled } = useScrolledContext();

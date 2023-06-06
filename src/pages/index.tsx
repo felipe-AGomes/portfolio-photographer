@@ -9,10 +9,12 @@ import useImagesContext from '@/hooks/useImagesContext';
 import useCurrentPageContext from '@/hooks/useCurrentPageContext';
 import { ImageProps } from '@/context/imagesContext';
 import SocialMedia from '@/components/SocialMedia';
+import useWindowWidthContext from '@/hooks/useWindowWidthContext';
 
 export default function Home() {
 	const { images } = useImagesContext();
 	const { currentPage } = useCurrentPageContext();
+	const { windowWidth } = useWindowWidthContext();
 	const [justCover, setJustCover] = useState<ImageProps[] | []>([]);
 	const [filteredImages, setFilteredImages] = useState<ImageProps[] | []>([]);
 
@@ -48,7 +50,7 @@ export default function Home() {
 			</Head>
 			<main>
 				<Header />
-				<PersonName />
+				{windowWidth && windowWidth > 780 && <PersonName />}
 				<SocialMedia />
 				<ImagesContainer>
 					{currentPage === 'inicio'

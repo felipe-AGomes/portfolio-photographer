@@ -5,6 +5,7 @@
 	transform: translateX(-50%);
 	transition: 0.4s;
 	z-index: 1001;
+	white-space: nowrap;
 }
 
 .personName.scrolled {
@@ -18,5 +19,21 @@
 	.personName.scrolled {
 		font-size: 1rem;
 		left: 70px;
+	}
+}
+
+@media (max-width: 780px) {
+	.personName {
+		top: 38px;
+		left: 50%;
+		transform: translateX(-50%);
+		transition: 0;
+		z-index: 1001;
+		font-size: 1.2rem;
+	}
+
+	.personName.scrolled {
+		left: 50%;
+		transform: translateX(-50%);
 	}
 }

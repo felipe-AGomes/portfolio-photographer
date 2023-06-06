@@ -1,4 +1,7 @@
 .socialMedia {
+	display: flex;
+	gap: 20px;
+	
 	position: relative;
 	left: 50%;
 	bottom: 19px;
@@ -9,4 +12,12 @@
 .socialMedia.scrolled {
 	color: transparent;
 	transition: 0.4s;
+}
+
+.socialMediaShortMenu {
+	display: flex;
+	gap: 10px;
+
+	margin-top: 20px;
+	z-index: 1001;
 }
