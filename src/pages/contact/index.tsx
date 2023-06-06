@@ -29,7 +29,7 @@ export default function Contact() {
 							style={{
 								outline: 'none',
 								textDecoration: 'none',
-								color: '#000',
+								color: 'inherit',
 								display: 'inline',
 							}}
 						>

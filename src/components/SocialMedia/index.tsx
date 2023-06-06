@@ -21,7 +21,12 @@ export default function SocialMedia({ shortMenu }: Props) {
 				href='https://www.instagram.com/carolpecharka/'
 				target='_blank'
 				rel='noopener noreferrer'
-				style={{outline: 'none', textDecoration: 'none', color: '#000', display: 'inline' }}
+				style={{
+					outline: 'none',
+					textDecoration: 'none',
+					color: 'inherit',
+					display: 'inline',
+				}}
 			>
 				<AiFillInstagram
 					size={24}
