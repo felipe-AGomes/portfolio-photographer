@@ -28,8 +28,9 @@
 @media (max-width: 780px) {
 	.aboutMeContain {
 		justify-content: center;
-
 		flex-direction: column;
+		gap: 30px;
+
 	}
 
 	.aboutMeContain div {
