@@ -44,7 +44,7 @@ export default function CardImage({ image, isAlbum }: Props) {
 					if (isAlbum) {
 						return;
 					}
-					handleHover(true);
+					handleHover(false);
 				}}
 				onMouseEnter={() => {
 					if (isAlbum) {
@@ -75,7 +75,7 @@ export default function CardImage({ image, isAlbum }: Props) {
 					if (isAlbum) {
 						return;
 					}
-					handleHover(true);
+					handleHover(false);
 				}}
 				onMouseEnter={() => {
 					if (isAlbum) {
