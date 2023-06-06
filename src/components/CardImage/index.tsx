@@ -34,18 +34,6 @@ export default function CardImage({ image, isAlbum }: Props) {
 		>
 			<h3
 				className={`${S.person} ${isCardHover && S.active}`}
-				onTouchStart={() => {
-					if (isAlbum) {
-						return;
-					}
-					handleHover(true);
-				}}
-				onTouchEnd={() => {
-					if (isAlbum) {
-						return;
-					}
-					handleHover(false);
-				}}
 				onMouseEnter={() => {
 					if (isAlbum) {
 						return;
