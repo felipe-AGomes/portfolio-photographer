@@ -99,10 +99,10 @@ header.contact {
 	justify-content: center;
 
 	position: fixed;
-	top: 0;
+	top: -100vh;
 	left: 0;
 	width: 100vw;
-	height: 0;
+	height: 100vh;
 	background: transparent;
 	z-index: 1000;
 	transition: 0.2s;
@@ -111,7 +111,7 @@ header.contact {
 
 .shortMenuContain.active {
 	background: #fff;
-	height: 100vh;
+	top: 0;
 	color: #000;
 }
 

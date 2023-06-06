@@ -25,7 +25,6 @@
 
 .formContain input,
 .formContain textarea {
-	/* border-radius: 5px; */
 	outline: none;
 	border: none;
 	border-bottom: 1px solid #b58561;
@@ -33,7 +32,7 @@
 	font-family: 'dubai', sans-serif;
 	font-size: 1rem;
 	font-weight: 500;
-	padding: 10px 15px
+	padding: 10px 15px;
 }
 
 .formContain textarea {

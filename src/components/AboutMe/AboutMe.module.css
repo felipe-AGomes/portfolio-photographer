@@ -24,3 +24,15 @@
 .aboutMeContain div p {
 	font-family: 'dubai', sans-serif;
 }
+
+@media (max-width: 780px) {
+	.aboutMeContain {
+		justify-content: center;
+
+		flex-direction: column;
+	}
+
+	.aboutMeContain div {
+		width: 100%;
+	}
+}

@@ -5,3 +5,10 @@
 #imageContain img {
 	width: 100%;
 }
+
+@media (max-width: 780px) {
+	#imageContain {
+		width: 100%;
+		max-width: 300px;
+	}
+}

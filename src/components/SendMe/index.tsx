@@ -13,7 +13,7 @@ export default function SendMe() {
 		formState: { errors },
 	} = useForm<Inputs>();
 	const onSubmit = async (event: Inputs) => {
-		const query = `mailto:falmeidagomes13@gmail.com?subject=${encodeURIComponent(
+		const query = `mailto:carolinepecharka@gmail.com?subject=${encodeURIComponent(
 			'Portfolio Fotografia',
 		)}&body=${encodeURIComponent(event.message)}`;
 
