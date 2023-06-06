@@ -6,9 +6,11 @@ import { ImageProps } from '@/context/imagesContext';
 import useImagesContext from '@/hooks/useImagesContext';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import useWindowWidthContext from '@/hooks/useWindowWidthContext';
 
 export default function Album() {
 	const [albumImages, setAlbumImages] = useState<ImageProps[] | []>([]);
+	const { windowWidth } = useWindowWidthContext();
 	const { images } = useImagesContext();
 	const router = useRouter();
 	const { album } = router.query;
@@ -20,7 +22,7 @@ export default function Album() {
 	return (
 		<main>
 			<Header />
-			<PersonName />
+			{windowWidth && windowWidth > 780 && <PersonName />}
 			<GridImagesContainer>
 				{albumImages.map((image) => {
 					return (
