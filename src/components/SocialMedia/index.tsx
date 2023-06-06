@@ -12,17 +12,26 @@ export default function SocialMedia({ shortMenu }: Props) {
 	return (
 		<div
 			className={
-				shortMenu ? `${S.socialMediaShortMenu}` : `${S.socialMedia} ${scrolled ? S.scrolled : ''}`
+				shortMenu
+					? `${S.socialMediaShortMenu}`
+					: `${S.socialMedia} ${scrolled ? S.scrolled : ''}`
 			}
 		>
-			<AiFillInstagram
+			<a
+				href='https://www.instagram.com/carolpecharka/'
+				target='_blank'
+				rel='noopener noreferrer'
+				style={{outline: 'none', textDecoration: 'none', color: '#000', display: 'inline' }}
+			>
+				<AiFillInstagram
+					size={24}
+					style={{ cursor: 'pointer' }}
+				/>
+			</a>
+			{/* <AiFillLinkedin
 				size={24}
 				style={{ cursor: 'pointer'}}
-			/>
-			<AiFillLinkedin
-				size={24}
-				style={{ cursor: 'pointer'}}
-			/>
+			/> */}
 		</div>
 	);
 }

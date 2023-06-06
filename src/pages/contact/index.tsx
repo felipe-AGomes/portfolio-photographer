@@ -22,14 +22,26 @@ export default function Contact() {
 				<div>
 					<h1>Redes sociais</h1>
 					<div style={{ marginBottom: '10px' }}>
-						<AiFillInstagram
+						<a
+							href='https://www.instagram.com/carolpecharka/'
+							target='_blank'
+							rel='noopener noreferrer'
+							style={{
+								outline: 'none',
+								textDecoration: 'none',
+								color: '#000',
+								display: 'inline',
+							}}
+						>
+							<AiFillInstagram
+								size={24}
+								style={{ cursor: 'pointer', marginRight: '10px' }}
+							/>
+						</a>
+						{/* <AiFillLinkedin
 							size={24}
 							style={{ cursor: 'pointer', marginRight: '10px' }}
-						/>
-						<AiFillLinkedin
-							size={24}
-							style={{ cursor: 'pointer', marginRight: '10px' }}
-						/>
+						/> */}
 					</div>
 
 					<h1>Sobre mim</h1>
