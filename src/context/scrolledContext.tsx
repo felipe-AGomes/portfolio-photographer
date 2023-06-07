@@ -1,9 +1,5 @@
+import { ScrolledContextProps } from '@/@types';
 import { createContext, useState } from 'react';
-
-type ScrolledContextProps = {
-	scrolled: boolean;
-	setScrolled: (newValue: boolean) => void;
-};
 
 type Props = {
 	children: React.ReactNode;

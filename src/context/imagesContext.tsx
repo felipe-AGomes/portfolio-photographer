@@ -1,19 +1,6 @@
+import { ImageProps, ImagesContextProps } from '@/@types';
 import React, { createContext, useContext, useState } from 'react';
-import { CategoriesProps } from './currentPageContext';
 
-type ImagesContextProps = {
-	images: ImageProps[] | [];
-	setImages: (newValue: ImageProps[] | []) => void;
-};
-
-export type ImageProps = {
-	url: string;
-	category: CategoriesProps;
-	person?: string;
-	locale?: string;
-	album: string;
-	cover: boolean;
-};
 
 type Props = {
 	children: React.ReactNode;

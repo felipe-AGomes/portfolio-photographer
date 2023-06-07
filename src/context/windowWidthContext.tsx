@@ -1,9 +1,5 @@
+import { WindowWidthContextProps } from '@/@types';
 import { createContext, useState } from 'react';
-
-type WindowWidthContextProps = {
-	windowWidth: number | null;
-	setWindowWidth: (newValue: number | null) => void;
-};
 
 type Props = {
 	children: React.ReactNode;

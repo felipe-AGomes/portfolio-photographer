@@ -7,9 +7,9 @@ import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import useImagesContext from '@/hooks/useImagesContext';
 import useCurrentPageContext from '@/hooks/useCurrentPageContext';
-import { ImageProps } from '@/context/imagesContext';
 import SocialMedia from '@/components/SocialMedia';
 import useWindowWidthContext from '@/hooks/useWindowWidthContext';
+import { ImageProps } from '@/@types';
 
 export default function Home() {
 	const { images } = useImagesContext();

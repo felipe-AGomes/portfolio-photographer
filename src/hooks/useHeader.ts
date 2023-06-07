@@ -3,8 +3,7 @@ import { useState } from 'react';
 import useScrolledContext from './useScrolledContext';
 import useCurrentPageContext from './useCurrentPageContext';
 import useWindowWidthContext from './useWindowWidthContext';
-import { CategoriesProps } from '@/context/currentPageContext';
-import { ImageProps } from '@/context/imagesContext';
+import { CategoriesProps } from '@/@types';
 
 export default function useHeader() {
 	const router = useRouter();

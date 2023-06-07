@@ -2,12 +2,12 @@ import CardImage from '@/components/CardImage';
 import ImagesContainer from '@/components/ImagesContainer';
 import Header from '@/components/Header';
 import PersonName from '@/components/PersonName';
-import { ImageProps } from '@/context/imagesContext';
 import useImagesContext from '@/hooks/useImagesContext';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import useWindowWidthContext from '@/hooks/useWindowWidthContext';
 import useWindowLoadContext from '@/hooks/useWindowLoadContext';
+import { ImageProps } from '@/@types';
 
 export default function Album() {
 	const [albumImages, setAlbumImages] = useState<ImageProps[] | []>([]);

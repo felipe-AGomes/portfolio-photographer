@@ -1,4 +1,4 @@
-import { ImageProps } from '@/context/imagesContext';
+import { ImageProps } from '@/@types';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 

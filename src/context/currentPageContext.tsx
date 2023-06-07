@@ -1,16 +1,5 @@
+import { CategoriesProps, CurrentPageContextProps } from '@/@types';
 import React, { createContext, useState } from 'react';
-
-export type CategoriesProps =
-	| 'historia'
-	| 'moda/beleza'
-	| 'retratos'
-	| 'inicio'
-	| 'bodyscape';
-
-type CurrentPageContextProps = {
-	currentPage: CategoriesProps;
-	setCurrentPage: (newValue: CategoriesProps) => void;
-};
 
 type Props = {
 	children: React.ReactNode;

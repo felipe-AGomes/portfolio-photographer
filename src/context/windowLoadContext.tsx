@@ -1,9 +1,5 @@
+import { WindowLoadContextProps } from '@/@types';
 import React, { createContext, useState } from 'react';
-
-type WindowLoadContextProps = {
-	windowLoad: boolean;
-	setWindowLoad: (newValue: boolean) => void;
-};
 
 type Props = {
 	children: React.ReactNode;
