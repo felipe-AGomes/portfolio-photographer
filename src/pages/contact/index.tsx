@@ -2,6 +2,7 @@ import AboutMe from '@/components/AboutMe';
 import Header from '@/components/Header';
 import PersonImage from '@/components/PersonImage';
 import SendMe from '@/components/SendMe';
+import SocialMedia from '@/components/SocialMedia';
 import useWindowWidthContext from '@/hooks/useWindowWidthContext';
 import { AiFillInstagram } from 'react-icons/ai';
 
@@ -21,28 +22,7 @@ export default function Contact() {
 			<AboutMe>
 				<div>
 					<h1>Redes sociais</h1>
-					<div style={{ marginBottom: '10px' }}>
-						<a
-							href='https://www.instagram.com/carolpecharka/'
-							target='_blank'
-							rel='noopener noreferrer'
-							style={{
-								outline: 'none',
-								textDecoration: 'none',
-								color: 'inherit',
-								display: 'inline',
-							}}
-						>
-							<AiFillInstagram
-								size={24}
-								style={{ cursor: 'pointer', marginRight: '10px' }}
-							/>
-						</a>
-						{/* <AiFillLinkedin
-							size={24}
-							style={{ cursor: 'pointer', marginRight: '10px' }}
-						/> */}
-					</div>
+					<SocialMedia styles={{justifyContent: 'flex-start'}} />
 
 					<h1>Sobre mim</h1>
 					<p>

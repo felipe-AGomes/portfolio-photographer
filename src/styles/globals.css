@@ -8,16 +8,22 @@
 	src: url('/fonts/grenda.otf');
 }
 
+:root {
+	--primary-color: #eee;
+	--font-color: #154a84;
+}
+
 * {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
 	font-family: 'grenda', sans-serif;
+	color: var(--font-color);
 }
 
 body,
 main {
-	background: #fff;
+	background: var(--primary-color);
 	min-height: 100vh;
 	overflow-x: hidden;
 }

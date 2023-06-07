@@ -36,6 +36,6 @@
 
 .imageContain .person.active {
 	visibility: visible;
-	color: #fff;
+	color: var(--font-color);
 	transition: 0.5s ;
 }

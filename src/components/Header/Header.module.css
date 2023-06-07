@@ -14,11 +14,11 @@
 }
 
 header.contact {
-	background: #fff;
+	background: var(--primary-color);
 }
 
 .headerContain.scrolled {
-	background: #fff5;
+	background: #eee5;
 }
 
 .personNameContain {
@@ -67,7 +67,7 @@ header.contact {
 	border-bottom: 2px solid #0000;
 }
 .headerContain ul li:hover {
-	border-bottom: 2px solid #000;
+	border-bottom: 2px solid var(--font-color);
 }
 
 .personName {
@@ -110,7 +110,7 @@ header.contact {
 }
 
 .shortMenuContain.active {
-	background: #fff;
+	background: var(--primary-color);
 	top: 0;
 	color: #000;
 }
@@ -119,7 +119,7 @@ header.contact {
 	border-bottom: 2px solid #0000;
 }
 .shortMenuContain.active #shortMenu li:hover {
-	border-bottom: 2px solid #000;
+	border-bottom: 2px solid var(--font-color);
 }
 #shortMenu {
 	display: flex;
