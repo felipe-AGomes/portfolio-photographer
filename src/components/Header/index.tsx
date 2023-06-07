@@ -62,6 +62,7 @@ export default function Header({ personName, isContact }: Props) {
 				<Link
 					href='/'
 					onClick={() => {
+						setWindowLoad(false);
 						setCurrentPage('inicio');
 					}}
 				>
@@ -81,7 +82,7 @@ export default function Header({ personName, isContact }: Props) {
 					<ul>
 						<li
 							onClick={() => {
-								setWindowLoad(false)
+								setWindowLoad(false);
 								handleClick('inicio');
 							}}
 						>
@@ -89,7 +90,7 @@ export default function Header({ personName, isContact }: Props) {
 						</li>
 						<li
 							onClick={() => {
-								setWindowLoad(false)
+								setWindowLoad(false);
 								handleClick('retratos');
 							}}
 						>
@@ -97,7 +98,7 @@ export default function Header({ personName, isContact }: Props) {
 						</li>
 						<li
 							onClick={() => {
-								setWindowLoad(false)
+								setWindowLoad(false);
 								handleClick('bodyscape');
 							}}
 						>
@@ -105,7 +106,7 @@ export default function Header({ personName, isContact }: Props) {
 						</li>
 						<li
 							onClick={() => {
-								setWindowLoad(false)
+								setWindowLoad(false);
 								handleClick('moda/beleza');
 							}}
 						>
@@ -113,7 +114,7 @@ export default function Header({ personName, isContact }: Props) {
 						</li>
 						<li
 							onClick={() => {
-								setWindowLoad(false)
+								setWindowLoad(false);
 								handleClick('historia');
 							}}
 						>
@@ -121,7 +122,7 @@ export default function Header({ personName, isContact }: Props) {
 						</li>
 						<li
 							onClick={() => {
-								setWindowLoad(false)
+								setWindowLoad(false);
 								handleClick('contact');
 							}}
 						>
@@ -140,7 +141,7 @@ export default function Header({ personName, isContact }: Props) {
 							<li
 								onClick={() => {
 									setMenuActive(false);
-									setWindowLoad(false)
+									setWindowLoad(false);
 									handleClick('inicio');
 								}}
 							>
@@ -149,7 +150,7 @@ export default function Header({ personName, isContact }: Props) {
 							<li
 								onClick={() => {
 									setMenuActive(false);
-									setWindowLoad(false)
+									setWindowLoad(false);
 									handleClick('retratos');
 								}}
 							>
@@ -158,7 +159,7 @@ export default function Header({ personName, isContact }: Props) {
 							<li
 								onClick={() => {
 									setMenuActive(false);
-									setWindowLoad(false)
+									setWindowLoad(false);
 									handleClick('bodyscape');
 								}}
 							>
@@ -167,7 +168,7 @@ export default function Header({ personName, isContact }: Props) {
 							<li
 								onClick={() => {
 									setMenuActive(false);
-									setWindowLoad(false)
+									setWindowLoad(false);
 									handleClick('moda/beleza');
 								}}
 							>
@@ -176,7 +177,7 @@ export default function Header({ personName, isContact }: Props) {
 							<li
 								onClick={() => {
 									setMenuActive(false);
-									setWindowLoad(false)
+									setWindowLoad(false);
 									handleClick('historia');
 								}}
 							>
@@ -185,7 +186,7 @@ export default function Header({ personName, isContact }: Props) {
 							<li
 								onClick={() => {
 									setMenuActive(false);
-									setWindowLoad(false)
+									setWindowLoad(false);
 									handleClick('contact');
 								}}
 							>
