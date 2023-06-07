@@ -33,10 +33,6 @@ export default function SocialMedia({ shortMenu }: Props) {
 					style={{ cursor: 'pointer' }}
 				/>
 			</a>
-			{/* <AiFillLinkedin
-				size={24}
-				style={{ cursor: 'pointer'}}
-			/> */}
 		</div>
 	);
 }

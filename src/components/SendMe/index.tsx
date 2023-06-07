@@ -1,24 +1,10 @@
 import { useForm } from 'react-hook-form';
+import { emailSubmit } from '@/functions/emailSubmit';
 import S from './SendMe.module.css';
-
-type Inputs = {
-	name: string;
-	message: string;
-};
+import { Inputs } from '@/@types';
 
 export default function SendMe() {
-	const {
-		register,
-		handleSubmit,
-		formState: { errors },
-	} = useForm<Inputs>();
-	const onSubmit = async (event: Inputs) => {
-		const query = `mailto:carolinepecharka@gmail.com?subject=${encodeURIComponent(
-			'Portfolio Fotografia',
-		)}&body=${encodeURIComponent(event.message)}`;
-
-		window.location.href = query;
-	};
+	const { register, handleSubmit } = useForm<Inputs>();
 
 	return (
 		<div className={S.sendMeContain}>
@@ -31,7 +17,7 @@ export default function SendMe() {
 			</div>
 			<form
 				className={S.formContain}
-				onSubmit={handleSubmit(onSubmit)}
+				onSubmit={handleSubmit(emailSubmit)}
 			>
 				<label htmlFor='name'>Nome:</label>
 				<input

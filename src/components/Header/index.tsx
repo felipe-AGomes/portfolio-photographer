@@ -13,6 +13,7 @@ import useWindowWidthContext from '@/hooks/useWindowWidthContext';
 import SocialMedia from '../SocialMedia';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import useWindowLoadContext from '@/hooks/useWindowLoadContext';
+import useHeader from '@/hooks/useHeader';
 
 type Props = {
 	personName?: string;
@@ -20,35 +21,19 @@ type Props = {
 };
 
 export default function Header({ personName, isContact }: Props) {
-	const { scrolled, setScrolled } = useScrolledContext();
+	const { scrolled } = useScrolledContext();
+	const { handleScrollWindow, handleResizeWindow, handleClickMenu } =
+		useHeader();
 	const { setWindowLoad } = useWindowLoadContext();
 	const { windowWidth, setWindowWidth } = useWindowWidthContext();
 	const { setCurrentPage } = useCurrentPageContext();
 	const [menuActive, setMenuActive] = useState<boolean>(false);
-	const router = useRouter();
 
 	useEffect(() => {
-		window.addEventListener('scroll', handleScroll);
-		window.addEventListener('resize', handleResize);
+		window.addEventListener('scroll', handleScrollWindow);
+		window.addEventListener('resize', handleResizeWindow);
 		setWindowWidth(window.innerWidth);
 	}, [windowWidth]);
-
-	const handleResize = () => {
-		setWindowWidth(window.innerWidth);
-	};
-
-	const handleScroll = () => {
-		setScrolled(window.scrollY > 0);
-	};
-
-	const handleClick = (category: CategoriesProps | 'contact') => {
-		if (category === 'contact') {
-			router.push('/contact');
-			return;
-		}
-		router.push('/');
-		setCurrentPage(category);
-	};
 
 	return (
 		<header
@@ -83,7 +68,7 @@ export default function Header({ personName, isContact }: Props) {
 						<li
 							onClick={() => {
 								setWindowLoad(false);
-								handleClick('inicio');
+								handleClickMenu('inicio');
 							}}
 						>
 							Início
@@ -91,7 +76,7 @@ export default function Header({ personName, isContact }: Props) {
 						<li
 							onClick={() => {
 								setWindowLoad(false);
-								handleClick('retratos');
+								handleClickMenu('retratos');
 							}}
 						>
 							Retratos
@@ -99,7 +84,7 @@ export default function Header({ personName, isContact }: Props) {
 						<li
 							onClick={() => {
 								setWindowLoad(false);
-								handleClick('bodyscape');
+								handleClickMenu('bodyscape');
 							}}
 						>
 							Bodyscape
@@ -107,7 +92,7 @@ export default function Header({ personName, isContact }: Props) {
 						<li
 							onClick={() => {
 								setWindowLoad(false);
-								handleClick('moda/beleza');
+								handleClickMenu('moda/beleza');
 							}}
 						>
 							Moda/Beleza
@@ -115,7 +100,7 @@ export default function Header({ personName, isContact }: Props) {
 						<li
 							onClick={() => {
 								setWindowLoad(false);
-								handleClick('historia');
+								handleClickMenu('historia');
 							}}
 						>
 							História
@@ -123,7 +108,7 @@ export default function Header({ personName, isContact }: Props) {
 						<li
 							onClick={() => {
 								setWindowLoad(false);
-								handleClick('contact');
+								handleClickMenu('contact');
 							}}
 						>
 							Contato
@@ -142,7 +127,7 @@ export default function Header({ personName, isContact }: Props) {
 								onClick={() => {
 									setMenuActive(false);
 									setWindowLoad(false);
-									handleClick('inicio');
+									handleClickMenu('inicio');
 								}}
 							>
 								Início
@@ -151,7 +136,7 @@ export default function Header({ personName, isContact }: Props) {
 								onClick={() => {
 									setMenuActive(false);
 									setWindowLoad(false);
-									handleClick('retratos');
+									handleClickMenu('retratos');
 								}}
 							>
 								Retratos
@@ -160,7 +145,7 @@ export default function Header({ personName, isContact }: Props) {
 								onClick={() => {
 									setMenuActive(false);
 									setWindowLoad(false);
-									handleClick('bodyscape');
+									handleClickMenu('bodyscape');
 								}}
 							>
 								Bodyscape
@@ -169,7 +154,7 @@ export default function Header({ personName, isContact }: Props) {
 								onClick={() => {
 									setMenuActive(false);
 									setWindowLoad(false);
-									handleClick('moda/beleza');
+									handleClickMenu('moda/beleza');
 								}}
 							>
 								Moda/Beleza
@@ -178,7 +163,7 @@ export default function Header({ personName, isContact }: Props) {
 								onClick={() => {
 									setMenuActive(false);
 									setWindowLoad(false);
-									handleClick('historia');
+									handleClickMenu('historia');
 								}}
 							>
 								História
@@ -187,7 +172,7 @@ export default function Header({ personName, isContact }: Props) {
 								onClick={() => {
 									setMenuActive(false);
 									setWindowLoad(false);
-									handleClick('contact');
+									handleClickMenu('contact');
 								}}
 							>
 								Contato

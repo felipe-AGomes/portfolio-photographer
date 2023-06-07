@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { ImageProps } from '@/context/imagesContext';
 import S from './CardImage.module.css';
 import { useRouter } from 'next/router';
+import useCardImage from '@/hooks/useCardImage';
 
 type Props = {
 	image: ImageProps;
@@ -10,16 +11,7 @@ type Props = {
 };
 
 export default function CardImage({ image, isAlbum }: Props) {
-	const [isCardHover, setIsCardHover] = useState<boolean>(false);
-	const router = useRouter();
-
-	const handleClick = (image: ImageProps) => {
-		router.push(`/${image.album}`);
-	};
-
-	const handleHover = (isHover: boolean) => {
-		setIsCardHover(isHover);
-	};
+	const { handleClickCard, handleHoverCard, isCardHover } = useCardImage();
 
 	return (
 		<figure
@@ -29,7 +21,7 @@ export default function CardImage({ image, isAlbum }: Props) {
 				if (isAlbum) {
 					return;
 				}
-				handleClick(image);
+				handleClickCard(image);
 			}}
 		>
 			<h3
@@ -38,13 +30,13 @@ export default function CardImage({ image, isAlbum }: Props) {
 					if (isAlbum) {
 						return;
 					}
-					handleHover(true);
+					handleHoverCard(true);
 				}}
 				onMouseLeave={() => {
 					if (isAlbum) {
 						return;
 					}
-					handleHover(false);
+					handleHoverCard(false);
 				}}
 			>
 				Ensaio | {image.person}
@@ -57,25 +49,25 @@ export default function CardImage({ image, isAlbum }: Props) {
 					if (isAlbum) {
 						return;
 					}
-					handleHover(true);
+					handleHoverCard(true);
 				}}
 				onTouchEnd={() => {
 					if (isAlbum) {
 						return;
 					}
-					handleHover(false);
+					handleHoverCard(false);
 				}}
 				onMouseEnter={() => {
 					if (isAlbum) {
 						return;
 					}
-					handleHover(true);
+					handleHoverCard(true);
 				}}
 				onMouseLeave={() => {
 					if (isAlbum) {
 						return;
 					}
-					handleHover(false);
+					handleHoverCard(false);
 				}}
 			/>
 		</figure>
