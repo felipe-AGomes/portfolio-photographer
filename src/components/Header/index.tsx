@@ -12,6 +12,7 @@ import useScrolledContext from '@/hooks/useScrolledContext';
 import useWindowWidthContext from '@/hooks/useWindowWidthContext';
 import SocialMedia from '../SocialMedia';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import useWindowLoadContext from '@/hooks/useWindowLoadContext';
 
 type Props = {
 	personName?: string;
@@ -20,6 +21,7 @@ type Props = {
 
 export default function Header({ personName, isContact }: Props) {
 	const { scrolled, setScrolled } = useScrolledContext();
+	const { setWindowLoad } = useWindowLoadContext();
 	const { windowWidth, setWindowWidth } = useWindowWidthContext();
 	const { setCurrentPage } = useCurrentPageContext();
 	const [menuActive, setMenuActive] = useState<boolean>(false);
@@ -77,12 +79,54 @@ export default function Header({ personName, isContact }: Props) {
 						</div>
 					)}
 					<ul>
-						<li onClick={() => handleClick('inicio')}>Início</li>
-						<li onClick={() => handleClick('retratos')}>Retratos</li>
-						<li onClick={() => handleClick('bodyscape')}>Bodyscape</li>
-						<li onClick={() => handleClick('moda/beleza')}>Moda/Beleza</li>
-						<li onClick={() => handleClick('historia')}>História</li>
-						<li onClick={() => handleClick('contact')}>Contato</li>
+						<li
+							onClick={() => {
+								setWindowLoad(false)
+								handleClick('inicio');
+							}}
+						>
+							Início
+						</li>
+						<li
+							onClick={() => {
+								setWindowLoad(false)
+								handleClick('retratos');
+							}}
+						>
+							Retratos
+						</li>
+						<li
+							onClick={() => {
+								setWindowLoad(false)
+								handleClick('bodyscape');
+							}}
+						>
+							Bodyscape
+						</li>
+						<li
+							onClick={() => {
+								setWindowLoad(false)
+								handleClick('moda/beleza');
+							}}
+						>
+							Moda/Beleza
+						</li>
+						<li
+							onClick={() => {
+								setWindowLoad(false)
+								handleClick('historia');
+							}}
+						>
+							História
+						</li>
+						<li
+							onClick={() => {
+								setWindowLoad(false)
+								handleClick('contact');
+							}}
+						>
+							Contato
+						</li>
 					</ul>
 				</>
 			)}
@@ -96,6 +140,7 @@ export default function Header({ personName, isContact }: Props) {
 							<li
 								onClick={() => {
 									setMenuActive(false);
+									setWindowLoad(false)
 									handleClick('inicio');
 								}}
 							>
@@ -104,6 +149,7 @@ export default function Header({ personName, isContact }: Props) {
 							<li
 								onClick={() => {
 									setMenuActive(false);
+									setWindowLoad(false)
 									handleClick('retratos');
 								}}
 							>
@@ -112,6 +158,7 @@ export default function Header({ personName, isContact }: Props) {
 							<li
 								onClick={() => {
 									setMenuActive(false);
+									setWindowLoad(false)
 									handleClick('bodyscape');
 								}}
 							>
@@ -120,6 +167,7 @@ export default function Header({ personName, isContact }: Props) {
 							<li
 								onClick={() => {
 									setMenuActive(false);
+									setWindowLoad(false)
 									handleClick('moda/beleza');
 								}}
 							>
@@ -128,6 +176,7 @@ export default function Header({ personName, isContact }: Props) {
 							<li
 								onClick={() => {
 									setMenuActive(false);
+									setWindowLoad(false)
 									handleClick('historia');
 								}}
 							>
@@ -136,6 +185,7 @@ export default function Header({ personName, isContact }: Props) {
 							<li
 								onClick={() => {
 									setMenuActive(false);
+									setWindowLoad(false)
 									handleClick('contact');
 								}}
 							>

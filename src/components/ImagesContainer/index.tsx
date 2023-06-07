@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import S from './ImagesContainer.module.css';
+import useWindowLoadContext from '@/hooks/useWindowLoadContext';
 
 type Props = {
 	children?: React.ReactNode;
 };
 
 export default function GridImagesContainer({ children }: Props) {
-	return <section className={S.imagesContainer}>{children}</section>;
+	const { windowLoad, setWindowLoad } = useWindowLoadContext();
+
+	useEffect(() => {
+		setWindowLoad(true);
+	});
+
+	return (
+		<section className={`${S.imagesContainer} ${windowLoad ? S.fadeIn : ''}`}>
+			{children}
+		</section>
+	);
 }
