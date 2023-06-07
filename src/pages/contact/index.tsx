@@ -3,7 +3,7 @@ import Header from '@/components/Header';
 import PersonImage from '@/components/PersonImage';
 import SendMe from '@/components/SendMe';
 import useWindowWidthContext from '@/hooks/useWindowWidthContext';
-import { AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
+import { AiFillInstagram } from 'react-icons/ai';
 
 export default function Contact() {
 	const { windowWidth } = useWindowWidthContext();

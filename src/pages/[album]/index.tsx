@@ -12,7 +12,7 @@ import { ImageProps } from '@/@types';
 export default function Album() {
 	const [albumImages, setAlbumImages] = useState<ImageProps[] | []>([]);
 	const { windowWidth } = useWindowWidthContext();
-	const { windowLoad, setWindowLoad } = useWindowLoadContext();
+	const { setWindowLoad } = useWindowLoadContext();
 	const { images } = useImagesContext();
 	const router = useRouter();
 	const { album } = router.query;

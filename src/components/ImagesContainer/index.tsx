@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import S from './ImagesContainer.module.css';
 import useWindowLoadContext from '@/hooks/useWindowLoadContext';
 

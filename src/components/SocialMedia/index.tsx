@@ -1,4 +1,4 @@
-import { AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
+import { AiFillInstagram } from 'react-icons/ai';
 import S from './SocialMedia.module.css';
 import useScrolledContext from '@/hooks/useScrolledContext';
 

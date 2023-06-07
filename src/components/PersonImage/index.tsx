@@ -1,6 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import S from './PersonImage.module.css';
 
-/* eslint-disable @next/next/no-img-element */
 type Props = {
 	url: string;
 };

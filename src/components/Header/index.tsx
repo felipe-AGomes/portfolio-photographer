@@ -3,10 +3,7 @@
 import { useEffect, useState } from 'react';
 import S from './Header.module.css';
 
-import {} from 'next/font/google';
-import { CategoriesProps } from '@/context/currentPageContext';
 import useCurrentPageContext from '@/hooks/useCurrentPageContext';
-import { useRouter } from 'next/router';
 import Link from 'next/link';
 import useScrolledContext from '@/hooks/useScrolledContext';
 import useWindowWidthContext from '@/hooks/useWindowWidthContext';

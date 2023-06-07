@@ -1,9 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import { useState } from 'react';
-import { ImageProps } from '@/context/imagesContext';
 import S from './CardImage.module.css';
-import { useRouter } from 'next/router';
 import useCardImage from '@/hooks/useCardImage';
+import { ImageProps } from '@/@types';
 
 type Props = {
 	image: ImageProps;

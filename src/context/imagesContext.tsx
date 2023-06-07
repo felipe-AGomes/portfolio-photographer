@@ -1,6 +1,5 @@
 import { ImageProps, ImagesContextProps } from '@/@types';
-import React, { createContext, useContext, useState } from 'react';
-
+import React, { createContext, useState } from 'react';
 
 type Props = {
 	children: React.ReactNode;
