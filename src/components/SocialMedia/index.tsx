@@ -8,10 +8,10 @@ import useScrolledContext from '@/hooks/useScrolledContext';
 
 type Props = {
 	shortMenu?: boolean;
-	styles?: React.CSSProperties;
+	style?: React.CSSProperties;
 };
 
-export default function SocialMedia({ shortMenu, styles }: Props) {
+export default function SocialMedia({ shortMenu, style }: Props) {
 	const { scrolled } = useScrolledContext();
 
 	return (
@@ -21,7 +21,7 @@ export default function SocialMedia({ shortMenu, styles }: Props) {
 					? `${S.socialMediaShortMenu}`
 					: `${S.socialMedia} ${scrolled ? S.scrolled : ''}`
 			}
-			style={{ ...styles }}
+			style={{ ...style }}
 		>
 			<a
 				href='https://www.instagram.com/carolpecharka/'

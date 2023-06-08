@@ -44,7 +44,7 @@
 .formContain button {
 	padding: 7px 20px;
 	width: min-content;
-	background: #b58561bb;
+	background: var(--font-color);
 	border-radius: 5px;
 	color: #fff;
 	font-weight: bold;
