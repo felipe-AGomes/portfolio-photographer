@@ -112,7 +112,7 @@ header.contact {
 .shortMenuContain.active {
 	background: var(--primary-color);
 	top: 0;
-	color: #000;
+	color: var(--font-color);
 }
 
 .shortMenuContain #shortMenu li:hover {

@@ -2,10 +2,21 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	gap: 5px;
 
 	width: 100%;
 	margin-bottom: 20px;
 	transition: 0.4s;
+}
+
+.socialMedia a,
+.socialMediaShortMenu a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	text-decoration: none;
+	color: inherit;
 }
 
 .socialMedia.scrolled {
@@ -15,14 +26,8 @@
 
 .socialMediaShortMenu {
 	display: flex;
-	gap: 10px;
+	gap: 5px;
 
 	margin-top: 20px;
 	z-index: 1001;
-}
-
-.socialMediaShortMenu a {
-	display: flex;
-	align-items: center;
-	justify-content: center;
 }

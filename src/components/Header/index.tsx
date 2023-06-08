@@ -38,7 +38,7 @@ export default function Header({ personName, isContact }: Props) {
 				isContact ? S.contact : scrolled ? S.scrolled : ''
 			} 
 				${personName ? `${S.personNameContain}` : ''}`}
-			style={windowWidth && windowWidth <= 780 ? { background: '#fff' } : {}}
+			style={windowWidth && windowWidth <= 780 ? { background: 'var(--primary-color)' } : {}}
 		>
 			<div className={S.logoBox}>
 				<Link

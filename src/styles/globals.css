@@ -18,7 +18,6 @@
 	padding: 0;
 	margin: 0;
 	font-family: 'grenda', sans-serif;
-	color: var(--font-color);
 }
 
 body,
@@ -26,6 +25,7 @@ main {
 	background: var(--primary-color);
 	min-height: 100vh;
 	overflow-x: hidden;
+	color: var(--font-color);
 }
 
 main {
