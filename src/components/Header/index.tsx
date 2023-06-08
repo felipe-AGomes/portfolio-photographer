@@ -175,7 +175,7 @@ export default function Header({ personName, isContact }: Props) {
 								Contato
 							</li>
 						</ul>
-						<SocialMedia shortMenu />
+						<SocialMedia fixed />
 					</div>
 					{!menuActive && (
 						<AiOutlineMenu

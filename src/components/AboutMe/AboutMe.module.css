@@ -16,7 +16,6 @@
 
 .aboutMeContain div p {
 	font-size: 1.2rem;
-	letter-spacing: 0.5px;
 	margin-bottom: 10px;
 }
 
@@ -29,8 +28,7 @@
 	.aboutMeContain {
 		justify-content: center;
 		flex-direction: column;
-		gap: 30px;
-
+		gap: 20px;
 	}
 
 	.aboutMeContain div {

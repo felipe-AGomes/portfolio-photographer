@@ -9,8 +9,8 @@ export default function SendMe() {
 	return (
 		<div className={S.sendMeContain}>
 			<div>
-				<h2>Entre em contato</h2>
-				<p>
+				<h2 style={{ fontFamily: 'dubai, sans-serif' }}>Entre em contato</h2>
+				<p style={{ fontFamily: 'grenda, sans-serif' }}>
 					Para consultas comerciais ou quaisquer perguntas, não hesite em me
 					contatar. Estou ansioso para ouvir de você!
 				</p>

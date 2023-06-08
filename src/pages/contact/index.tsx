@@ -3,7 +3,6 @@ import Header from '@/components/Header';
 import PersonDescription from '@/components/PersonDescription';
 import PersonImage from '@/components/PersonImage';
 import SendMe from '@/components/SendMe';
-import SocialMedia from '@/components/SocialMedia';
 import useWindowWidthContext from '@/hooks/useWindowWidthContext';
 
 export default function Contact() {
@@ -12,7 +11,9 @@ export default function Contact() {
 	return (
 		<main
 			style={
-				windowWidth && windowWidth <= 780 ? { padding: '120px 10px 50px' } : {}
+				windowWidth && windowWidth <= 780
+					? { padding: '120px 10px 50px' }
+					: { padding: '120px 100px 50px' }
 			}
 		>
 			<Header

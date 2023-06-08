@@ -3,17 +3,17 @@ import S from './SocialMedia.module.css';
 import useScrolledContext from '@/hooks/useScrolledContext';
 
 type Props = {
-	shortMenu?: boolean;
+	fixed?: boolean;
 	style?: React.CSSProperties;
 };
 
-export default function SocialMedia({ shortMenu, style }: Props) {
+export default function SocialMedia({ fixed, style }: Props) {
 	const { scrolled } = useScrolledContext();
 
 	return (
 		<div
 			className={
-				shortMenu
+				fixed
 					? `${S.socialMediaShortMenu}`
 					: `${S.socialMedia} ${scrolled ? S.scrolled : ''}`
 			}
