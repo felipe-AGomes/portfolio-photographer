@@ -1,10 +1,10 @@
 import AboutMe from '@/components/AboutMe';
 import Header from '@/components/Header';
+import PersonDescription from '@/components/PersonDescription';
 import PersonImage from '@/components/PersonImage';
 import SendMe from '@/components/SendMe';
 import SocialMedia from '@/components/SocialMedia';
 import useWindowWidthContext from '@/hooks/useWindowWidthContext';
-import { AiFillInstagram } from 'react-icons/ai';
 
 export default function Contact() {
 	const { windowWidth } = useWindowWidthContext();
@@ -20,22 +20,7 @@ export default function Contact() {
 				isContact
 			/>
 			<AboutMe>
-				<div>
-					<h1>Redes sociais</h1>
-					<SocialMedia styles={{justifyContent: 'flex-start'}} />
-
-					<h1>Sobre mim</h1>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis incidunt
-						similique fuga mollitia totam, quaerat quam. Laborum, laudantium nihil,
-						vel sunt quae optio sit cumque explicabo autem est quidem nam?
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis incidunt
-						similique fuga mollitia totam, quaerat quam. Laborum, laudantium nihil,
-						vel sunt quae optio sit cumque explicabo autem est quidem nam?
-					</p>
-				</div>
+				<PersonDescription />
 				<PersonImage
 					url={
 						'https://img.freepik.com/fotos-gratis/estilo-de-vida-beleza-e-moda-conceito-de-emocoes-de-pessoas-jovem-gerente-de-escritorio-feminino-asiatico-ceo-com-expressao-satisfeita-em-pe-sobre-um-fundo-branco-sorrindo-com-os-bracos-cruzados-sobre-o-peito_1258-59329.jpg?w=996&t=st=1686074785~exp=1686075385~hmac=088c800223a9c67a26ca6e4d2b346068f0f6689219f947089b6d91779f8eacdc'
