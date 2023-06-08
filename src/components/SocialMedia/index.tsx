@@ -1,8 +1,4 @@
-import {
-	AiFillInstagram,
-	AiOutlineInstagram,
-	AiOutlineMail,
-} from 'react-icons/ai';
+import { AiOutlineInstagram, AiOutlineMail } from 'react-icons/ai';
 import S from './SocialMedia.module.css';
 import useScrolledContext from '@/hooks/useScrolledContext';
 
@@ -27,20 +23,19 @@ export default function SocialMedia({ shortMenu, style }: Props) {
 				href='https://www.instagram.com/carolpecharka/'
 				target='_blank'
 				rel='noopener noreferrer'
-				style={{
-					display: 'flex',
-					alignItems: 'center',
-					justifyContent: 'center',
-					gap: '5px',
-					outline: 'none',
-					textDecoration: 'none',
-					color: 'inherit',
-				}}
 			>
 				<AiOutlineInstagram
 					size={24}
 					style={{ cursor: 'pointer' }}
 				/>
+			</a>
+			<a
+				href={`mailto:carolinepecharka@gmail.com?subject=${encodeURIComponent(
+					'Portfolio Fotografia',
+				)}`}
+				target='_blank'
+				rel='noopener noreferrer'
+			>
 				<AiOutlineMail
 					size={24}
 					style={{ cursor: 'pointer' }}
