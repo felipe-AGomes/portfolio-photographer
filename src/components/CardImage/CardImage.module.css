@@ -17,25 +17,22 @@
 }
 
 .imageContain .person {
-	visibility: hidden;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	color: transparent;
+	opacity: 0;
 	z-index: 1;
 	white-space: nowrap;
 	transition: 0.2s;
 	font-family: 'dubai', sans-serif;
 }
 
-.imageContain .person:hover ~ img {
+.imageContain.offAlbum:hover img {
 	filter: blur(2px) contrast(0.5);
 	transition: 0.2s linear;
 }
 
-.imageContain .person.active {
-	visibility: visible;
-	color: var(--font-color);
-	transition: 0.5s ;
+.imageContain.offAlbum:hover .person {
+	opacity: 1;
 }

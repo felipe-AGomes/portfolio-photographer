@@ -9,11 +9,11 @@ type Props = {
 };
 
 export default function CardImage({ image, isAlbum }: Props) {
-	const { handleClickCard, handleHoverCard, isCardHover } = useCardImage();
+	const { handleClickCard } = useCardImage();
 
 	return (
 		<figure
-			className={S.imageContain}
+			className={`${S.imageContain} ${isAlbum ? '' : S.offAlbum}`}
 			style={isAlbum ? { cursor: 'default' } : {}}
 			onClick={() => {
 				if (isAlbum) {
@@ -22,52 +22,11 @@ export default function CardImage({ image, isAlbum }: Props) {
 				handleClickCard(image);
 			}}
 		>
-			<h3
-				className={`${S.person} ${isCardHover && S.active}`}
-				onMouseEnter={() => {
-					if (isAlbum) {
-						return;
-					}
-					handleHoverCard(true);
-				}}
-				onMouseLeave={() => {
-					if (isAlbum) {
-						return;
-					}
-					handleHoverCard(false);
-				}}
-			>
-				Ensaio | {image.person}
-			</h3>
 			<img
-				className={`${isCardHover ? S.cardHover : ''}`}
 				src={`${image.url}.jpg`}
 				alt='imagem'
-				onTouchStart={() => {
-					if (isAlbum) {
-						return;
-					}
-					handleHoverCard(true);
-				}}
-				onTouchEnd={() => {
-					if (isAlbum) {
-						return;
-					}
-					handleHoverCard(false);
-				}}
-				onMouseEnter={() => {
-					if (isAlbum) {
-						return;
-					}
-					handleHoverCard(true);
-				}}
-				onMouseLeave={() => {
-					if (isAlbum) {
-						return;
-					}
-					handleHoverCard(false);
-				}}
 			/>
+			<h3 className={S.person}>Ensaio | {image.person}</h3>
 		</figure>
 	);
 }
